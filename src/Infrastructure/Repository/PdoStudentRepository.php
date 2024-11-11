@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Pdo\Infraestructure\Repository;
+namespace Alura\Pdo\Infrastructure\Repository;
 
 use Alura\Pdo\Domain\Model\Student;
 use Alura\Pdo\Domain\Repository\StudentRepository;
@@ -45,6 +45,7 @@ class PdoStudentRepository implements StudentRepository
                 new \DateTimeImmutable($studentData['birth_date'])
             );
         }
+
         return $studentList;
     }
 
@@ -53,13 +54,14 @@ class PdoStudentRepository implements StudentRepository
         if ($student->id() === null) {
             return $this->insert($student);
         }
+
         return $this->update($student);
     }
 
     private function insert(Student $student): bool
     {
         $insertQuery = 'INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);';
-        $stmt = $this->$this->connection->prepare($insertQuery);
+        $stmt = $this->connection->prepare($insertQuery);
 
         $success = $stmt->execute([
             ':name' => $student->name(),

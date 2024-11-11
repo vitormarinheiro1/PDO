@@ -4,7 +4,7 @@ use Alura\Pdo\Domain\Model\Student;
 
 require_once 'vendor/autoload.php';
 
-$pdo = \Alura\Pdo\Infraestructure\Persistence\ConnectionCreator::createConnection();
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 $statement = $pdo->query('SELECT * FROM students WHERE id = 1;');
 // USO DO FETCH COLUMN

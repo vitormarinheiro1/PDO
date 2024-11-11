@@ -1,8 +1,8 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infraestructure\Persistence\ConnectionCreator;
-use Alura\Pdo\Infraestructure\Repository\PdoStudentRepository;
+use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
 require_once 'vendor/autoload.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-$pdo = \Alura\Pdo\Infraestructure\Persistence\ConnectionCreator::createConnection();
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 echo "Conectei";
 
