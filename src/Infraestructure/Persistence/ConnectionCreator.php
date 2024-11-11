@@ -1,10 +1,10 @@
 <?php
 
-namespace Alura\Pdo\Infrastructure\Persistence;
+namespace Alura\Pdo\Infraestructure\Persistence;
 
 use PDO;
 
-// static create method
+// static creation method
 class ConnectionCreator
 {
     public static function createConnection(): PDO
