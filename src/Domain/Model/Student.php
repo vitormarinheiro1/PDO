@@ -2,14 +2,12 @@
 
 namespace Alura\Pdo\Domain\Model;
 
-use Phone;
-
 class Student
 {
     private ?int $id;
     private string $name;
     private \DateTimeInterface $birthDate;
-    /** @var Phone[] */
+    /** @var Phone[]  */
     private array $phones = [];
 
     public function __construct(?int $id, string $name, \DateTimeInterface $birthDate)
@@ -22,7 +20,7 @@ class Student
     public function defineId(int $id): void
     {
         if (!is_null($this->id)) {
-            throw new \DomainException(message:'Você só pode definir o ID uma vez');
+            throw new \DomainException('Você só pode definir o ID uma vez');
         }
 
         $this->id = $id;
